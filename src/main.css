@@ -1,0 +1,90 @@
+@import "stylesheets/color.css";
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.main {
+  width: 40%;
+  margin: 10% auto;
+  padding: .8em 1.6em;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-defaul);
+  border-radius: .3em;
+  font-size: 1.3rem;
+}
+
+.app-title {
+  margin: 0 auto .4em;
+  text-align: center;
+  text-shadow: 0 1px 0 #eee,
+               0 2px 0 #ddd,
+               0 3px 0 #ccc,
+               0 4px 0 #bbb,
+               0 5px 0 #aaa,
+               0 6px 0 #999,
+               0 7px 0 #888,
+               0 8px 7px #777,
+               0 -1px 1px #eee;
+  color: #fff;
+  font-size: 4em;
+}
+
+.book-list,
+.book-edit,
+.book-add {
+    margin-bottom: 2em;
+}
+
+.book-list > .title,
+.book-add > .title {
+    font-size: 1.6rem;
+    color: var(--color-title);
+}
+
+.book-add input[type="text"],
+.book-edit input[type="text"] {
+  box-sizing: border-box;
+  width: 80%;
+  padding: .8em .4em;
+  border-radius: .3em;
+  border: 1px solid #eee;
+  font-size: 1em;
+  color: var(--color-input-text);
+  outline: 0;
+}
+
+.button {
+  box-sizing: border-box;
+  padding: .8em .6em;
+  margin: 0 .3em;
+  border-radius: .3em;
+  background-color: #fff;
+  border: 1px solid #eee;
+  font-size: 1em;
+  color: #999;
+  outline: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.link-to {
+  color: #999;
+  text-decoration: dotted;
+  cursor: pointer;
+}
+
+.book .book-id:after {
+    content: ":";
+}
+
+.book .book-title {
+    font-size: 700;
+    font-size: 1.3rem;
+    padding: .2em .4em;
+}
