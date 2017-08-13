@@ -10,7 +10,7 @@ import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 
 import thunkMiddleware from 'redux-thunk'
-import remoteActionMiddleware from '../src/middlewear/remote_action'
+import awesomeActionMiddleware from '../src/middlewear/awesome_action'
 import loggerMIddlewear from '../src/middlewear/logger'
 
 import reducers from '../src/reducers/'
@@ -37,7 +37,7 @@ connection.query(query, (err, row, fields) => {
     initState = {books: row}
 
     const createStoreWithMiddleware = applyMiddleware(
-        remoteActionMiddleware,
+        awesomeActionMiddleware,
         loggerMIddlewear,
         thunkMiddleware,
     )(createStore)

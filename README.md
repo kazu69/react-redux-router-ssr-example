@@ -1,13 +1,15 @@
-## React + Redux + React Router (v4) with SSR(Server Side Rendering) Example
+## React + Redux + SSR(Server Side Rendering) Example
 
-### How To Start
+> Using React with Redux. Routing react-router(v4) and SSR.
+
+### How to start
+
+Require [docker-compose](https://docs.docker.com/compose/).
 
 ```sh
-mysql -uUSER -pPASS -hHOST < scheme.sql
-npm i && npm server start
+docker compose up -d
 ```
 
-### Todo
+Access to http://127.0.0.1:3000.
 
-- Dockernize
-- Using FlowType
+![](screen/cap.png)

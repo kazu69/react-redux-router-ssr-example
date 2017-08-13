@@ -47,6 +47,16 @@ html {
     color: var(--color-title);
 }
 
+.book-list .items .item {
+    margin: 1em 0;
+    padding: 1em 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.book-list .items .item:last-child {
+    border-bottom: 0;
+}
+
 .book-add input[type="text"],
 .book-edit input[type="text"] {
   box-sizing: border-box;

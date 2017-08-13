@@ -1,0 +1,45 @@
+version: "2"
+services:
+  db:
+    build:
+      context: .
+      dockerfile: ./mysql.dockerfile
+    ports:
+      - 3306:3306
+
+  node_app:
+    build:
+      context: .
+      dockerfile: node.dockerfile
+    depends_on:
+       - db
+    links:
+      - db:mysql
+    ports:
+      - 3000:3000
+
+networks:
+  backend:
+  frontend:
+
+
+# start
+# $ docker swarm init
+
+# > docker swarm join --token SWMTKN-1-4sqsewxeou9wqki8u64akdglmh2l3alylqg277ojjnpwn3fut3-alip55uc13p7021y9fw9w2bgt 192.168.65.2:2377
+
+# $ docker stack deploy --compose-file docker-compose.yml redmine
+
+# $docker stack ls
+# NAME  SERVICES
+# web   1
+
+# $ docker service list
+# $ docker stack services web
+# ID            NAME     MODE        REPLICAS  IMAGE
+# d26y7ybjo2nc  web_web  replicated  3/5       mysql:latest
+
+# $ docker stack ps web --filter desired-state=Running
+# ID            NAME       IMAGE         NODE  DESIRED STATE  CURRENT STATE          ERROR  PORTS
+# sljzair0cgsu  web_web.4  mysql:latest  moby  Running        Running 6 seconds ago
+

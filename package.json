@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm run flow:start",
-    "start": "webpack-dev-server",
-    "build": "webpack --config ./webpack.config.js --progress --color",
-    "preserver": "npm run build",
-    "server": "babel-node --presets latest,react server/index.js",
+    "prestart": "npm run build:app",
+    "dev:start": "webpack-dev-server",
+    "start":"babel-node --presets latest,react server/index.js",
+    "build:app": "webpack --config ./webpack.config.js --progress --color",
     "flow:start": "flow status",
     "flow:stop": "flow stop"
   },

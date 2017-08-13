@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const banner = `
-    github.com/kazu69/flux-awesome-ssr-examples
+     React + Redux + React Router with SSR Example
 `
 module.exports = {
     context: __dirname + '/src',

@@ -6,7 +6,7 @@ import { createStore, applyMiddleware} from 'redux'
 import reducers from './reducers/'
 
 import thunkMiddleware from 'redux-thunk'
-import remoteActionMiddleware from './middlewear/remote_action'
+import awesomeActionMiddleware from './middlewear/awesome_action'
 import loggerMIddlewear from './middlewear/logger'
 import * as bookActions from './actions/bookActions';
 
@@ -14,7 +14,7 @@ import App from './containers/Client'
 import styles from './main.css'
 
 const createStoreWithMiddleware = applyMiddleware(
-    remoteActionMiddleware,
+    awesomeActionMiddleware,
     loggerMIddlewear,
     thunkMiddleware,
 )(createStore)
