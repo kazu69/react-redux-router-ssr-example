@@ -12,4 +12,4 @@ docker compose up -d
 
 Access to http://127.0.0.1:3000.
 
-![](screen/cap.png)
+![](https://user-images.githubusercontent.com/512415/29245415-f42ca22e-8013-11e7-87f3-0f0f4b99daa4.png)
