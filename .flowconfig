@@ -1,0 +1,26 @@
+[ignore]
+.*/*.json
+.*/*.css
+<PROJECT_ROOT>/config/
+<PROJECT_ROOT>/public/webpack.config.js
+<PROJECT_ROOT>/public/.*
+<PROJECT_ROOT>/src/stylesheets/.*
+
+# Including these files causes issues
+.*/node_modules/.*
+.*/node_modules/fbjs/.*
+
+[include]
+./src/
+./src/actions/
+
+[libs]
+# Custom definitions
+config/flow-typed/
+
+[options]
+module.use_strict=true
+module.name_mapper='\(react-redux\)' -> '<PROJECT_ROOT>/config/flow-typed/GeneralStub.js'
+module.name_mapper='\(redux\)' -> '<PROJECT_ROOT>/config/flow-typed/GeneralStub.js'
+module.name_mapper='.*\(.scss\|.png\|.md\)' -> '<PROJECT_ROOT>/config/flow-typed/GeneralStub.js'
+[version]
