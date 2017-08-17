@@ -7,5 +7,3 @@ ENV MYSQL_DATABASE develop_db
 EXPOSE 3306
 
 ADD mysql/init.d /docker-entrypoint-initdb.d
-
-# docker run --name mysql -d mysql:latest
